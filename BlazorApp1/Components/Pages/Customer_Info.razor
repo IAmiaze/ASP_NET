@@ -1,0 +1,60 @@
+@page "/Customer_Info"
+@attribute [StreamRendering]
+
+@inject BlazorApp1.Services.OracleDbService OracleDbService
+
+<PageTitle>Customer Info</PageTitle>
+
+<h1>Customer Info</h1>
+
+<p>This component demonstrates showing customer data from Oracle DB.</p>
+
+@if (customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (customers.Rows.Count == 0)
+{
+    <p><em>No customers found.</em></p>
+}
+else
+{
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                @foreach (System.Data.DataColumn col in customers.Columns)
+                {
+                    <th>@col.ColumnName</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (System.Data.DataRow row in customers.Rows)
+            {
+                <tr>
+                    @foreach (var item in row.ItemArray)
+                    {
+                        <td>@item</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private System.Data.DataTable? customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            customers = await OracleDbService.GetDataAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error loading customer data: {ex.Message}");
+            customers = new System.Data.DataTable(); // avoid null refs
+        }
+    }
+}

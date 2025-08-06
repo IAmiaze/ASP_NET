@@ -1,0 +1,38 @@
+@page "/Customer_Entry"
+@attribute [StreamRendering]
+
+<h3>Customer Entry</h3>
+
+<div class="mb-3">
+    <label for="customerId" class="form-label">Customer ID</label>
+    <input id="customerId" class="form-control" placeholder="Enter Customer ID" />
+</div>
+
+<div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input id="name" class="form-control" placeholder="Enter Name" />
+</div>
+
+<div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input id="email" type="email" class="form-control" placeholder="Enter Email" />
+</div>
+
+<div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input id="phone" class="form-control" placeholder="Enter Phone Number" />
+</div>
+
+<button class="btn btn-primary" @onclick="OnSubmitClicked">Submit</button>
+
+<p class="mt-3 text-success" hidden="@(!submitted)">Customer details submitted (static page).</p>
+
+@code {
+    private bool submitted = false;
+
+    private void OnSubmitClicked()
+    {
+        // Just set submitted to true for demo purposes
+        submitted = true;
+    }
+}
