@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\LearnAspJava\\BlazorApp1\\BlazorApp1.csproj": {}
+    "F:\\LearnAspJava\\BlazorApp1\\BlazorApp1.csproj": {}
   },
   "projects": {
-    "f:\\LearnAspJava\\BlazorApp1\\BlazorApp1.csproj": {
+    "F:\\LearnAspJava\\BlazorApp1\\BlazorApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\LearnAspJava\\BlazorApp1\\BlazorApp1.csproj",
+        "projectUniqueName": "F:\\LearnAspJava\\BlazorApp1\\BlazorApp1.csproj",
         "projectName": "BlazorApp1",
-        "projectPath": "f:\\LearnAspJava\\BlazorApp1\\BlazorApp1.csproj",
+        "projectPath": "F:\\LearnAspJava\\BlazorApp1\\BlazorApp1.csproj",
         "packagesPath": "C:\\Users\\AyubMiaze.AzureAD\\.nuget\\packages\\",
-        "outputPath": "f:\\LearnAspJava\\BlazorApp1\\obj\\",
+        "outputPath": "F:\\LearnAspJava\\BlazorApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AyubMiaze.AzureAD\\AppData\\Roaming\\NuGet\\NuGet.Config"
